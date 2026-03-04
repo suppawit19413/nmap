@@ -396,7 +396,7 @@ void validate_scan_lists(scan_lists &vports, NmapOps &vo) {
 #ifdef WIN32
       error("Warning:  Npcap not detected -- using TCP pingscan rather than ICMP");
 #else
-      error("Warning:  You are not root -- using TCP pingscan rather than ICMP");
+      error("Warning:  You are not root you don't have permission -- using TCP pingscan rather than ICMP");
 #endif
       vo.pingtype &= ~(PINGTYPE_ICMP_PING | PINGTYPE_ICMP_MASK | PINGTYPE_ICMP_TS);
       vo.pingtype |= PINGTYPE_TCP;
